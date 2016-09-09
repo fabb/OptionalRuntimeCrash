@@ -13,6 +13,7 @@
 		1F20240F1D82E95F0051F3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F20240E1D82E95F0051F3E1 /* Assets.xcassets */; };
 		1F2024121D82E95F0051F3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2024101D82E95F0051F3E1 /* LaunchScreen.storyboard */; };
 		1F20241D1D82E95F0051F3E1 /* OptionalRuntimeCrashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20241C1D82E95F0051F3E1 /* OptionalRuntimeCrashTests.swift */; };
+		1F20242A1D82EA640051F3E1 /* Problematic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2024291D82EA640051F3E1 /* Problematic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		1F2024181D82E95F0051F3E1 /* OptionalRuntimeCrashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionalRuntimeCrashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F20241C1D82E95F0051F3E1 /* OptionalRuntimeCrashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalRuntimeCrashTests.swift; sourceTree = "<group>"; };
 		1F20241E1D82E95F0051F3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2024271D82EA640051F3E1 /* OptionalRuntimeCrash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OptionalRuntimeCrash-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F2024281D82EA640051F3E1 /* Problematic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Problematic.h; sourceTree = "<group>"; };
+		1F2024291D82EA640051F3E1 /* Problematic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Problematic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				1F20240E1D82E95F0051F3E1 /* Assets.xcassets */,
 				1F2024101D82E95F0051F3E1 /* LaunchScreen.storyboard */,
 				1F2024131D82E95F0051F3E1 /* Info.plist */,
+				1F2024281D82EA640051F3E1 /* Problematic.h */,
+				1F2024291D82EA640051F3E1 /* Problematic.m */,
+				1F2024271D82EA640051F3E1 /* OptionalRuntimeCrash-Bridging-Header.h */,
 			);
 			path = OptionalRuntimeCrash;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				TargetAttributes = {
 					1F2024031D82E95F0051F3E1 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					1F2024171D82E95F0051F3E1 = {
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F20240A1D82E95F0051F3E1 /* ViewController.swift in Sources */,
+				1F20242A1D82EA640051F3E1 /* Problematic.m in Sources */,
 				1F2024081D82E95F0051F3E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,10 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OptionalRuntimeCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = my.org.OptionalRuntimeCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OptionalRuntimeCrash/OptionalRuntimeCrash-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -351,10 +363,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OptionalRuntimeCrash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = my.org.OptionalRuntimeCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OptionalRuntimeCrash/OptionalRuntimeCrash-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
