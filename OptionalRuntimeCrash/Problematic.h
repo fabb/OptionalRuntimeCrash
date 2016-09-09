@@ -3,4 +3,6 @@
 
 @interface Problematic : NSObject
 
++ (void)problematic:(id _Nonnull)param;
+
 @end

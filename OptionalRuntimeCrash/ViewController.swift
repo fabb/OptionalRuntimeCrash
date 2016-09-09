@@ -4,14 +4,11 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		// should not compile due to nullability in Problematic.h
+		// crashes at runtime, as _SwiftValue type is passed to objc
+		Problematic.problematic(Optional("test"));
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
 
 }
 
